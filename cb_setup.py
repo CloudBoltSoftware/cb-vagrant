@@ -341,7 +341,7 @@ print(f"status: {status}  response {response} reason: {response.reason}")
 
 print("Creating Blueprint")
 status, response = create_blueprint(
-    file_name='vagrant_server.zip',
+    file_name=os.environ['BLUEPRINTFILE'],
     username='vagrant',
     password='cbvagrant',
     file_path='/vagrant')
