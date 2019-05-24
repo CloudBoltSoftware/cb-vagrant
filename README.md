@@ -26,3 +26,25 @@ $ cd cloudbolt_upgrader_*
 $ ./upgrade_cloudbolt.sh
 ```
 
+## Setup your variables for configuring instance
+```
+export RESOURCEHANDLERNAME='vCenter Dev'
+export RESOURCEHANDLERIP='vcenter.domain.com'
+export RESOURCEHANDLERDESCRIPTION='Dev Vcenter'
+export RESOURCEHANDLERUSERNAME='ldap@domain'
+export RESOURCEHANDLERPASSWORD='resourcehandlerpassword'
+export RESOURCEHANDLERNETWORKNAMES='Name of Network'
+export RESOURCEHANDLERVIRTUALFOLDERPATH='vagrant/{{ group }}-vagrant'
+export ENVIRONMENTNAME='Dev'
+export ENVIRONMENTCLUSTERNAME='vcenter cluster'
+export ENVIRONMENTDATASTORE='vcenter datastore'
+export TEMPLATENAME='myawesomewindowstemplate'
+export OSBUILDNAME='Windows'
+export OSBUILDFAMILY='Windows'
+export OSBUILDENVIRONMENTS='Dev'
+export TEMPLATEUSERNAME='Administrator'
+export GITHUBUSERNAME='username'
+export GITHUBPASSWORD='password'
+```
+
+### Place License.bin file in same directory as Vagrantfile.
