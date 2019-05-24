@@ -45,6 +45,7 @@ export OSBUILDENVIRONMENTS='Dev'
 export TEMPLATEUSERNAME='Administrator'
 export GITHUBUSERNAME='username'
 export GITHUBPASSWORD='password'
+export BLUEPRINTFILE='myfile.zip'
 ```
 
 ### Place License.bin file in same directory as Vagrantfile.
