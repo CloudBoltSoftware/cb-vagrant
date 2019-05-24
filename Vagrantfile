@@ -77,7 +77,8 @@ SCRIPT
       OSBUILDENVIRONMENTS:ENV['OSBUILDENVIRONMENTS'],
       TEMPLATEUSERNAME:ENV['TEMPLATEUSERNAME'],
       GITHUBUSERNAME:ENV['GITHUBUSERNAME'],
-      GITHUBPASSWORD:ENV['GITHUBPASSWORD']}
+      GITHUBPASSWORD:ENV['GITHUBPASSWORD'],
+      BLUEPRINTFILE:ENV['BLUEPRINTFILE']}
   end
   config.trigger.after [:up, :reload, :resume] do |trigger|
     trigger.run_remote = {inline: "echo Cloudbolt available at $(ifconfig eth1| egrep -o 'inet addr[^ ]+');"}
