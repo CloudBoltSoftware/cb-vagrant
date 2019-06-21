@@ -25,7 +25,6 @@ Vagrant.configure("2") do |config|
 
   if ENV['PUBLIC_NETWORK'] then
     config.vm.provision "shell", run: "always", path: "routing.sh"
-    config.vm.provision "shell", path: "dev_env.sh"
   end
 
   config.trigger.after [:up, :resume, :reload] do |trigger|
