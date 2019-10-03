@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.trigger.after [:up, :resume, :reload] do |trigger|
-    trigger.run_remote = {inline: "echo Cloudbolt available at $(ifconfig eth1| egrep -o 'inet addr[^ ]+');"}
+    trigger.run_remote = {inline: "echo Cloudbolt available at $(ifconfig eth1| egrep -o 'inet [^ ]+');"}
   end
 
 end
