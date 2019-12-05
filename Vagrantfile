@@ -5,8 +5,8 @@ Vagrant.configure("2") do |config|
   config.ssh.password = "cloudbolt"
   config.vm.define "cloudbolt" do |cb|
     cb.vm.hostname = "vagrant-cloudbolt"
-    cb.vm.box = "cloudbolt-9.0"
-    cb.vm.box_url = "http://downloads.cloudbolt.io/vagrant/cloudbolt-9.0.box"
+    cb.vm.box = "cloudbolt-9.1"
+    cb.vm.box_url = "http://downloads.cloudbolt.io/vagrant/cloudbolt-9.1.box"
     
     if ENV['PUBLIC_NETWORK']
       cb.vm.network("public_network")
