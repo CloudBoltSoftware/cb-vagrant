@@ -8,11 +8,7 @@ Vagrant.configure("2") do |config|
     cb.vm.box = "cloudbolt-9.4"
     cb.vm.box_url = "http://downloads.cloudbolt.io/vagrant/cloudbolt-9.4.box"
     
-    if ENV['PUBLIC_NETWORK']
-      cb.vm.network("public_network")
-    else
-      cb.vm.network("private_network", type:"dhcp")
-    end
+    cb.vm.network("private_network", type:"dhcp")
    
     cb.vm.provider "virtualbox" do |vm|
       vm.default_nic_type = "virtio"
@@ -21,10 +17,6 @@ Vagrant.configure("2") do |config|
       vm.gui = false
     end
 
-  end
-
-  if ENV['PUBLIC_NETWORK'] then
-    config.vm.provision "shell", run: "always", path: "routing.sh"
   end
 
   config.trigger.after [:up, :resume, :reload] do |trigger|
