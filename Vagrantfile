@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.trigger.after [:up, :resume, :reload] do |trigger|
-    trigger.run_remote = {inline: "echo Cloudbolt available at $(hostname -I | cut -d' ' -f2);"}
+    trigger.run_remote = {inline: "echo Login to this instance at https://$(hostname -I | cut -d' ' -f2);"}
   end
 
 end
